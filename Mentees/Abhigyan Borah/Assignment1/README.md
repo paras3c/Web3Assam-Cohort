@@ -1,6 +1,5 @@
-# Assignment 1 - Full Stack User Management Application
+# Assignment 1 - Full Stack U
 
-A complete full-stack web application for managing users. This project consists of a Node.js/Express backend API and a React frontend UI, demonstrating modern web development practices with proper separation of concerns.
 
 ## 📋 Project Overview
 
@@ -301,39 +300,4 @@ All file operations use async/await for non-blocking I/O
 ### Responsive Grid
 Frontend grid adapts: 1 column (mobile) → 2 columns (tablet) → 4 columns (desktop)
 
-## 🧪 Testing the Application
 
-### Test User Creation
-1. Fill form with: Name: "Test User", Email: "test@example.com"
-2. Click Submit
-3. Verify new user appears in the grid
-4. Check `backend/users.json` for the new entry
-
-### Test Validation
-1. Try submitting empty name → Error message
-2. Try submitting invalid email → Error message
-3. Try submitting duplicate email → 409 error
-
-### Test Error Handling
-1. Stop the backend server
-2. Reload frontend
-3. Error message displays "Failed to load users"
-
-## 📖 For More Details
-
-- **Backend Documentation**: See `backend/README.md`
-- **Frontend Documentation**: See `frontend/README.md`
-
-## 🎓 Learning Outcomes
-
-This assignment demonstrates:
-- Full-stack JavaScript development
-- RESTful API design principles
-- Component-based React architecture
-- Form handling and validation
-- HTTP request/response handling
-- Error handling best practices
-- Responsive design techniques
-- State management in React
-- Middleware patterns in Express
-- File I/O operations in Node.js
