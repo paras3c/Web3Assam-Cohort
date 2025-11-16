@@ -25,6 +25,11 @@ A simple REST API built with Go and Gin framework for managing users. This serve
 
 2. Install dependencies:
    ```bash
+   go mod tidy
+   ```
+   or
+   
+   ```bash
    go mod download
    ```
 
