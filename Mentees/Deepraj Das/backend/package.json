@@ -1,0 +1,17 @@
+{
+  "name": "deepraj-das",
+  "version": "1.0.0",
+  "description": "Web3 Winter Cohort 2025 - Assignment 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "index.js": "^0.0.3",
+    "node": "^25.2.0",
+    "nodemon": "^3.1.11"
+  }
+}
