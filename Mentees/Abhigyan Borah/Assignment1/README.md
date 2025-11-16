@@ -1,4 +1,4 @@
-# Assignment 1 - Full Stack U
+# Assignment 1 - Full Stack 
 
 
 ## 📋 Project Overview
