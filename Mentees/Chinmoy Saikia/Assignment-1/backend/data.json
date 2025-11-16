@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1763301595814,
+    "name": "Prakash nath",
+    "email": "example666@gmail.coom",
+    "role": "enginneer"
+  },
+  {
+    "id": 1763303520825,
+    "name": "Chinmoy Saikia",
+    "email": "chinmoy672@example.com",
+    "role": "DevOp"
+  },
+  {
+    "id": 1763303563150,
+    "name": "sumit das",
+    "email": "sumit@gmail.com",
+    "role": "manager"
+  },
+  {
+    "id": 1763303947957,
+    "name": "Ronok Khan",
+    "email": "ronokkhan679@gmail.com",
+    "role": "machine learning expert"
+  }
+]
