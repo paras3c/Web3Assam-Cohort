@@ -1,83 +1,47 @@
 import { useState } from "react";
-import { updateUserData } from "../api";
+import { updateUser } from "../api";
 
-function UserForm({ user, setUser }) {
+export default function UserForm({ user, setUser, showToast }) {
   const [form, setForm] = useState(user);
-  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
+    setForm({ ...form, [e.target.name]: e.target.value });
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const result = await updateUserData(form);
-    if (result.data) {
-      setUser(result.data);
-      setMessage("User updated successfully!");
-      setTimeout(() => setMessage(""), 2000);
+
+    setLoading(true);
+
+    const result = await updateUser(form);   // <-- PUT REQUEST
+
+    if (result.user) {
+      setUser(result.user);                  // Update UI
+      showToast("User updated successfully");
+    } else {
+      showToast("Error updating user");
     }
+
+    setLoading(false);
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        border: "1px solid #ccc",
-        padding: "20px",
-        borderRadius: "8px",
-        width: "300px",
-      }}
-    >
-      <h3>Update User</h3>
+    <form className="card form-card" onSubmit={handleSubmit}>
+      <h2>Update User</h2>
 
       <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={form.name}
-        onChange={handleChange}
-        style={{ width: "100%", marginBottom: "10px" }}
-      />
+      <input name="name" value={form.name} onChange={handleChange} />
 
       <label>Email</label>
-      <input
-        type="email"
-        name="email"
-        value={form.email}
-        onChange={handleChange}
-        style={{ width: "100%", marginBottom: "10px" }}
-      />
+      <input type="email" name="email" value={form.email} onChange={handleChange} />
 
       <label>Role</label>
-      <input
-        type="text"
-        name="role"
-        value={form.role}
-        onChange={handleChange}
-        style={{ width: "100%", marginBottom: "10px" }}
-      />
+      <input name="role" value={form.role} onChange={handleChange} />
 
-      <button
-        type="submit"
-        style={{
-          width: "100%",
-          padding: "10px",
-          background: "black",
-          color: "white",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
-      >
-        Update
+      <button type="submit" disabled={loading}>
+        {loading ? "Saving..." : "Save"}
       </button>
-
-      {message && <p style={{ color: "green", marginTop: "10px" }}>{message}</p>}
     </form>
   );
 }
-
-export default UserForm;
