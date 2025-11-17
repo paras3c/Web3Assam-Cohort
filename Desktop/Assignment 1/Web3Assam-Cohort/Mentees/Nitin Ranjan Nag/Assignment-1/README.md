@@ -41,7 +41,7 @@ This is a full-stack application that demonstrates CRUD operations using Node.js
    npm run dev
    ```
 
-4. The backend server will run on **http://localhost:5000**
+4. The backend server will run on **http://localhost:5001** (port 5001 to avoid conflict with macOS AirPlay on port 5000)
 
 ### Frontend Setup
 
@@ -100,7 +100,7 @@ npm run dev
 
 ### Base URL
 ```
-http://localhost:5000/api
+http://localhost:5001/api
 ```
 
 ### Endpoints
@@ -260,7 +260,7 @@ Assignment-1/
 ## 📝 Notes
 
 - Ensure the backend is running before starting the frontend
-- The backend server runs on port **5000** by default
+- The backend server runs on port **5001** by default (changed from 5000 to avoid macOS AirPlay conflict)
 - The frontend runs on port **5173** by default (Vite)
 - CORS is enabled to allow frontend-backend communication
 - All user data is persisted in `backend/data/data.json`
