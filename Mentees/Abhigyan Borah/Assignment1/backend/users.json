@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "email": "alice@mail.com"
+  },
+  {
+    "id": 2,
+    "name": "vibhu",
+    "email": "vibhu00shukla@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "abhigyan",
+    "email": "abhigyanprofessional@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "isha",
+    "email": "ishasudarshini@gmail.com"
+  }
+]
