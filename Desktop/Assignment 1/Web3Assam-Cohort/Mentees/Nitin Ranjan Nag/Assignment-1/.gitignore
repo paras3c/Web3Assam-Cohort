@@ -1,0 +1,19 @@
+# Node
+node_modules
+npm-debug.log*
+
+# Env files
+.env
+.env.*
+
+# Build output
+dist
+.next
+build
+
+# Editor
+.DS_Store
+.eslintcache
+.vite
+coverage
+
